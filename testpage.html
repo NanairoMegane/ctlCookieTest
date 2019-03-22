@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>
+            Cookie test
+        </title>
+        <link rel="stylesheet"
+              href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <style>
+            .container{margin: 10px}
+        </style>
+    </head>
+    <body>
+        <div class="container panel panel-info">
+            <div class="panel-heading">
+                次に入力した文字をクッキーに格納します。
+            </div>
+            <div class="panel-body">
+                <form id="inputbox" action="/show" method="post">
+                    <div>
+                        <input type="text" name="msg">
+                        <input type="submit" value="送信">
+                    </div>
+                </form>
+                <form id="delete" action="/delete" method="post">
+                    <div>
+                        <input type="submit" value="Delete Cookie">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container panel panel-success">
+            <div class="panel-heading">
+                クッキーの中から入力値を取得します。
+            </div>
+            <div class="panel-body">
+                {{.msg}}
+            </div>
+        </div>
+    </body>
+</html>
